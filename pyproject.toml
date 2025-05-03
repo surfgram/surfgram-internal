@@ -1,0 +1,39 @@
+[build-system]
+requires = ["maturin>=1.5,<2.0"]
+build-backend = "maturin"
+
+[project]
+name = "surfgram-internal"
+version = "0.1.0"
+description = "Internal utilities for Surfgram. Not for external use."
+authors = [
+    { name = "anybody", email = "help.surfgram@gmail.com" }
+]
+license = "MIT"
+requires-python = ">=3.8"
+keywords = ["surfgram", "internal", "utils"]
+classifiers = [
+    "Development Status :: 2 - Pre-Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Rust",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+
+[project.urls]
+Homepage = "https://github.com/surfgram/surfgram-internal"
+Repository = "https://github.com/surfgram/surfgram-internal.git"
+Issues = "https://github.com/surfgram/surfgram-internal/issues"
+
+[tool.maturin]
+features = ["pyo3/extension-module"]
+module-name = "surfgram_internal"
+bindings = "pyo3"
+strip = true
